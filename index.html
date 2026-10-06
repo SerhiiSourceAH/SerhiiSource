@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serhii Source — Founder of Arbfeld</title>
+    <meta
+      name="description"
+      content="Serhii Source (Serhii Rohovskyi) is the solo founder of Arbfeld — a web platform for finding and calculating cross-exchange arbitrage on spot crypto markets. Based in Germany, originally from Mariupol, Ukraine."
+    />
+    <meta name="author" content="Serhii Source" />
+    <meta name="robots" content="index,follow" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070b15" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f7fb" />
+
+    <!-- Open Graph / Twitter (kept in sync with the active language) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Serhii Source" />
+    <meta property="og:title" content="Serhii Source — Founder of Arbfeld" />
+    <meta
+      property="og:description"
+      content="Serhii Source (Serhii Rohovskyi) is the solo founder of Arbfeld — a web platform for finding and calculating cross-exchange arbitrage on spot crypto markets. Based in Germany, originally from Mariupol, Ukraine."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Inline SVG favicon: stepped order-book depth glyph -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1222'/%3E%3Cpath d='M30 48V36h-8v-8h-8v-8H6v28z' fill='%2334d399'/%3E%3Cpath d='M34 48v-9h7v-8h7v-7h10v24z' fill='%23fb7185'/%3E%3C/svg%3E"
+    />
+
+    <!-- Typography: Inter (UI) + JetBrains Mono (numbers / labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Runs before first paint: dark by default, light only if the user
+      // saved it or the OS explicitly prefers light. Also restores the
+      // saved language on <html lang> to avoid a wrong-language flash.
+      (function () {
+        var d = document.documentElement;
+        try {
+          var theme = localStorage.getItem('ss-theme');
+          if (theme !== 'light' && theme !== 'dark') {
+            theme =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark';
+          }
+          d.classList.toggle('dark', theme === 'dark');
+          var lang = localStorage.getItem('ss-lang');
+          if (lang === 'en' || lang === 'ru' || lang === 'de' || lang === 'zh') {
+            d.lang = lang === 'zh' ? 'zh-CN' : lang;
+          }
+        } catch (e) {
+          d.classList.add('dark');
+        }
+      })();
+    </script>
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+    <script type="module" crossorigin src="./assets/index-CVGmztgX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BA_QZh-q.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="font-family: sans-serif; padding: 2rem; color: #9aa8c4">
+        This website needs JavaScript to render. — Serhii Source, founder of Arbfeld
+        (https://arbfeld.github.io/)
+      </p>
+    </noscript>
+  </body>
+</html>
